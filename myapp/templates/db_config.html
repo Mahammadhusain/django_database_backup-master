@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  DB-Config
+{% endblock title %}
+  
+
+
+{% block body %}
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-lg-5 p-4 border" style="border-radius: 10px;">
+                <form method="POST">
+                  {% csrf_token %}
+                    <div class="mb-3">
+                      <label  class="form-label">Database Vendors</label>
+                      <select class="form-select form-select-sm" name="db_vendor">
+                        <option selected disabled>--- Select Database Vendor ---</option>
+                        <option value="1">SqlLite3</option>
+                        <option value="2">Mysql</option>
+                        <option value="3">Postgresql </option>
+                      </select>
+                      
+                    </div>
+                    <div class="mb-3">
+                      <label  class="form-label">Database Name</label>
+                      <input type="text" class="form-control form-control-sm" name="db_name" placeholder="Enter database name">
+                    </div>
+                    <div class="mb-3">
+                      <label  class="form-label">Username</label>
+                      <input type="text" class="form-control form-control-sm" name="db_user" placeholder="Enter database username">
+                    </div>
+
+                    <div class="mb-3">
+                      <label  class="form-label">Password</label>
+                      <input type="text" class="form-control form-control-sm" name="db_pass" placeholder="Enter database password">
+                    </div>
+
+                    <div class="mb-3">
+                      <label  class="form-label">Host</label>
+                      <input type="text" class="form-control form-control-sm" name="db_host" placeholder="Enter database host name">
+                    </div>
+
+                    <div class="mb-3">
+                      <label  class="form-label">Port</label>
+                      <input type="text" class="form-control form-control-sm" name="db_port" placeholder="Enter database port number">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
+    

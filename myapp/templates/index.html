@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+     Index | Page 
+{% endblock title %}
+   
+{% block body %}
+    
+<div class="container ">
+  <div class="row g-3 g-lg-5 p-2">
+    
+    <div class="col d-grid " >
+      {% if db_vendor == 'sqlite' %}
+      <button disabled  type="button" class="btn p-3 databasebox bg-light text-center" ><a href=""><img style="width: 180px; height: 90px;" src="{% static 'logo/sqllite3.png' %}" alt=""></a>
+        
+        <div class="row ">
+          <div class="col-1"><div class=" green_led"></div></div>
+          <div class="col-4 ms-1 mt-1 led_label">Running...</div>
+        </div>
+      
+      </button>
+      {% else %}
+      <button  type="button"  class="btn p-3 databasebox bg-light text-center" ><a href=""><img style="width: 180px; height: 90px;" src="{% static 'logo/sqllite3.png' %}" alt=""></a>
+        
+        <div class="row ">
+          <div class="col-1 "><div class="red_led"></div></div>
+          <div class="col-6 ms-1 mt-1 led_label">Not connected...</div>
+        </div>
+      
+      </button>
+      {% endif %}
+      
+    </div>
+    <div class="col d-grid">
+      {% if db_vendor == 'mysql' %}
+      <button disabled type="button" class="btn p-3 databasebox bg-light text-center" ><a href=""><img style="width: 180px; height: 90px;" src="{% static 'logo/mysql.png' %}" alt=""></a>
+
+        <div class="row">
+          <div class="col-1 "><div class=" green_led"></div></div>
+          <div class="col-4 ms-1 mt-1 led_label">Running...</div>
+        </div>
+      
+      </button>
+      {% else %}
+      <button type="button" class="btn p-3 databasebox bg-light text-center" ><a href="{% url 'mysql_config' %}"><img style="width: 180px; height: 90px;" src="{% static 'logo/mysql.png' %}" alt=""></a>
+        
+        <div class="row">
+          <div class="col-1 "><div class="red_led"></div></div>
+          <div class="col-6 ms-1 mt-1 led_label">Not connected...</div>
+        </div>
+      
+      
+      </button>
+      {% endif %}
+    </div>
+    <div class="col d-grid">
+      {% if db_vendor == 'postgresql' %}
+      <button disabled type="button" class="btn p-3 databasebox bg-light text-center" ><a href=""><img style="width: 180px; height: 90px;" src="{% static 'logo/postgresql.png' %}" alt=""></a>
+      
+        <div class="row">
+          <div class="col-1 "><div class=" green_led"></div></div>
+          <div class="col-4 ms-1 mt-1 led_label">Running...</div>
+        </div>
+      
+      </button>
+      {% else %}
+      <button data-bs-toggle="modal" data-bs-target="#Postgresqlmodal" class="btn p-3 databasebox bg-light text-center" >
+        <img style="width: 180px; height: 90px;" src="{% static 'logo/postgresql.png' %}" alt="">
+        
+        
+        <div class="row">
+          <div class="col-1 "><div class="red_led"></div></div>
+          <div class="col-6 ms-1 mt-1 led_label">Not connected...</div>
+        </div>
+
+
+      </button>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+
+  <div class="container ">
+    <div>
+      {% for message in messages %}
+      <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>{{ message }}</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+        {% endfor %}
+    </div>
+
+
+    <div class="row p-3 gap-5 ">
+      <div class="col-sm-12 col-lg-4 col-md-6 p-4" style="border: 1px solid green; border-radius: 10px;background-color: aquamarine;">
+        <h3 class="mb-3">Take Database Backup</h3>
+        <a class="btn btn-success btn-lg" href="{% url 'databackup' %}"><i class="bi bi-server"></i> Backup now</a>
+      </div>
+      <div class="col-sm-12 col-lg-7 col-md-6 p-4" style="border: 1px solid green; border-radius: 10px; background-color: #b3ecff;">
+        <h3 class="mb-3">Restore Database</h3>
+        <form action="{% url 'load_data' %}" method="POST">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-sm-12 col-lg-7 col-md-6">
+              <input type="file" class="form-control form-control-lg" name="data_file" >
+            </div>
+            <div class="col-sm-12 col-lg-5 col-md-6">
+              <button class="btn btn-primary btn-lg" type="submit">Restore Data</button> 
+
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h3 class="mb-3 text-center p-2" style="background-color: darkslategrey; color: azure; border-radius: 5px;">Students data</h3>
+    <div class="text-end mb-3">
+      <a class="btn btn-danger  " href="{% url 'deletedata' %}"><i class="bi bi-trash3-fill"></i> Delete now</a>
+    </div>
+
+    <table class="table table-striped table-hover" >
+      <thead>
+        <tr style="border: 1px solid black;">
+          <th scope="col">No.</th>
+          <th scope="col">Name</th>
+          <th scope="col">E-Mail</th>
+          <th scope="col">Role</th>
+          <th scope="col">City</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+    
+        {% for i in all_students %}
+        <tr class="{% cycle 'table-info' 'table-warning' %}" style="border: 1px solid black;">
+          <th scope="row">{{forloop.counter}}</th>
+          <td>{{i.name}}</td>
+          <td>{{i.roll}}</td>
+          <td>{{i.email}}</td>
+          <td>{{i.city}}</td>
+          {% empty %}
+          <td colspan="5" class="text-danger text-center "><h5><strong>-------- No any data found --------</strong></h5></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  
+{% endblock body %}
+   

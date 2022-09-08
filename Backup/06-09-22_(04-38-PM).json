@@ -1,0 +1,603 @@
+[
+{
+   "model": "admin.logentry",
+   "pk": 1,
+   "fields": {
+      "action_time": "2022-09-01T10:30:07.493Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "Raj",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 2,
+   "fields": {
+      "action_time": "2022-09-02T12:15:11.102Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "Mahesh",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 3,
+   "fields": {
+      "action_time": "2022-09-02T12:32:05.805Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "Mahesh",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 4,
+   "fields": {
+      "action_time": "2022-09-02T12:32:05.925Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "Raj",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 5,
+   "fields": {
+      "action_time": "2022-09-02T14:09:51.740Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "Mahesh",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 6,
+   "fields": {
+      "action_time": "2022-09-02T14:09:51.806Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "Raj",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 7,
+   "fields": {
+      "action_time": "2022-09-03T09:29:45.486Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "Mahesh",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 8,
+   "fields": {
+      "action_time": "2022-09-03T09:29:45.488Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "Raj",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 9,
+   "fields": {
+      "action_time": "2022-09-06T10:46:03.151Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "Mahesh",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 10,
+   "fields": {
+      "action_time": "2022-09-06T10:46:03.239Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "Raj",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 11,
+   "fields": {
+      "action_time": "2022-09-06T10:49:19.624Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "Suresh",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 12,
+   "fields": {
+      "action_time": "2022-09-06T10:49:43.244Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "4",
+      "object_repr": "Parth",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 13,
+   "fields": {
+      "action_time": "2022-09-06T10:51:02.097Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "5",
+      "object_repr": "Farhan",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 1,
+   "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 2,
+   "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 3,
+   "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 4,
+   "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 5,
+   "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 6,
+   "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 7,
+   "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 8,
+   "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 9,
+   "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 10,
+   "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 11,
+   "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 12,
+   "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 13,
+   "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 14,
+   "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 15,
+   "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 16,
+   "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 17,
+   "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 18,
+   "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 19,
+   "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 20,
+   "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 21,
+   "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 22,
+   "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 23,
+   "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 24,
+   "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 25,
+   "fields": {
+      "name": "Can add student model",
+      "content_type": 7,
+      "codename": "add_studentmodel"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 26,
+   "fields": {
+      "name": "Can change student model",
+      "content_type": 7,
+      "codename": "change_studentmodel"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 27,
+   "fields": {
+      "name": "Can delete student model",
+      "content_type": 7,
+      "codename": "delete_studentmodel"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 28,
+   "fields": {
+      "name": "Can view student model",
+      "content_type": 7,
+      "codename": "view_studentmodel"
+   }
+},
+{
+   "model": "auth.user",
+   "pk": 1,
+   "fields": {
+      "password": "pbkdf2_sha256$320000$ynpM64ajkUYoeLsop7M1dX$0MdfOMurcsA4FWaoKD3alnyFVktW7Y4eWJqEUCYJM0c=",
+      "last_login": "2022-09-06T10:45:44.527Z",
+      "is_superuser": true,
+      "username": "1",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-09-01T09:11:22.323Z",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 1,
+   "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 2,
+   "fields": {
+      "app_label": "auth",
+      "model": "permission"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 3,
+   "fields": {
+      "app_label": "auth",
+      "model": "group"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 4,
+   "fields": {
+      "app_label": "auth",
+      "model": "user"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 5,
+   "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 6,
+   "fields": {
+      "app_label": "sessions",
+      "model": "session"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 7,
+   "fields": {
+      "app_label": "myapp",
+      "model": "studentmodel"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "1jv9yqo9rv4lfqhqx0lgghgbr8dv1b2h",
+   "fields": {
+      "session_data": ".eJxVjMsOwiAUBf-FtSGXN7h0328gXB5SNZCUdmX8d9ukC92emTlv4sO2Vr-NvPg5kSth5PK7YYjP3A6QHqHdO429rcuM9FDoSQedesqv2-n-HdQw6l6LqBOHwDkHo1RB7phAVrSQBpBLyBGS1RKiljmbhFYYdDt3TpgCVpHPF71ENt4:1oU7tC:X_6pg91XK6CNdA8VqqKT5AkBWw6E2RgZVlfH7kq3AQk",
+      "expire_date": "2022-09-16T14:43:22.391Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "7k2ohpl9wiud2njc1thq2gb3ody14djb",
+   "fields": {
+      "session_data": ".eJxVjMsOwiAUBf-FtSGXN7h0328gXB5SNZCUdmX8d9ukC92emTlv4sO2Vr-NvPg5kSth5PK7YYjP3A6QHqHdO429rcuM9FDoSQedesqv2-n-HdQw6l6LqBOHwDkHo1RB7phAVrSQBpBLyBGS1RKiljmbhFYYdDt3TpgCVpHPF71ENt4:1oU7sJ:TUw8yahDbw8Ct8elnZgD4OkUjsfZIRNsO7-dmL2aJQU",
+      "expire_date": "2022-09-16T14:42:27.226Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "8xnvb3l5eoyttag5lqn8nfdqxx5fqtl2",
+   "fields": {
+      "session_data": ".eJxVjMsOwiAUBf-FtSGXN7h0328gXB5SNZCUdmX8d9ukC92emTlv4sO2Vr-NvPg5kSth5PK7YYjP3A6QHqHdO429rcuM9FDoSQedesqv2-n-HdQw6l6LqBOHwDkHo1RB7phAVrSQBpBLyBGS1RKiljmbhFYYdDt3TpgCVpHPF71ENt4:1oVW5Q:-5m9CPAGngBnmoxBkUVL_jRxIoPm6EYCy65AIDAFljI",
+      "expire_date": "2022-09-20T10:45:44.540Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "ju9xw4dkterktfdr61qt5pjwimtajbo3",
+   "fields": {
+      "session_data": ".eJxVjMsOwiAUBf-FtSGXN7h0328gXB5SNZCUdmX8d9ukC92emTlv4sO2Vr-NvPg5kSth5PK7YYjP3A6QHqHdO429rcuM9FDoSQedesqv2-n-HdQw6l6LqBOHwDkHo1RB7phAVrSQBpBLyBGS1RKiljmbhFYYdDt3TpgCVpHPF71ENt4:1oUPR3:JELxQLUCD0qqKPe2YUn6ZzlOKXF4PIHz_1KC_pH7p3Q",
+      "expire_date": "2022-09-17T09:27:29.736Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "k6bx8jxnh3qnn53auuxuexfvwa6l4tx6",
+   "fields": {
+      "session_data": ".eJxVjMsOwiAQAP-FsyEssNB69N5vIMuy2Kppkz5Oxn83JD3odWYyb5Xo2Md0bLKmqairAnX5ZZn4KXMT5UHzfdG8zPs6Zd0SfdpND0uR1-1s_wYjbWPbQgzO1iwOaxQwZDtkC-xK8Og7wz70wBERnORQMfZSAnroyBIaJ-rzBb1fNt0:1oU7mq:f8BkS-BXyc2mOdQPC6yQd4qIuekmJFF5NLlevUxF-q0",
+      "expire_date": "2022-09-16T14:36:48.482Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "suone1pq99i3siqanawewzfuqljw6dc4",
+   "fields": {
+      "session_data": ".eJxVjMsOwiAUBf-FtSGXN7h0328gXB5SNZCUdmX8d9ukC92emTlv4sO2Vr-NvPg5kSth5PK7YYjP3A6QHqHdO429rcuM9FDoSQedesqv2-n-HdQw6l6LqBOHwDkHo1RB7phAVrSQBpBLyBGS1RKiljmbhFYYdDt3TpgCVpHPF71ENt4:1oThRs:lphKMzRCS1jfzVqsutZ6WCDHobk-YwjDKKzR9PmU8HE",
+      "expire_date": "2022-09-15T10:29:24.189Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "xvyz3kp91o1lq4iddkuj7rhxxpsbc0pl",
+   "fields": {
+      "session_data": ".eJxVjMsOwiAUBf-FtSGXN7h0328gXB5SNZCUdmX8d9ukC92emTlv4sO2Vr-NvPg5kSth5PK7YYjP3A6QHqHdO429rcuM9FDoSQedesqv2-n-HdQw6l6LqBOHwDkHo1RB7phAVrSQBpBLyBGS1RKiljmbhFYYdDt3TpgCVpHPF71ENt4:1oU5ZX:9D5R_dJrYWhPKhBHcShJ8Xv6qxpun6Pq6OfzI7wngFk",
+      "expire_date": "2022-09-16T12:14:55.606Z"
+   }
+},
+{
+   "model": "myapp.studentmodel",
+   "pk": 1,
+   "fields": {
+      "name": "Raj",
+      "roll": 101,
+      "email": "raj@email.com",
+      "city": "1"
+   }
+},
+{
+   "model": "myapp.studentmodel",
+   "pk": 2,
+   "fields": {
+      "name": "Mahesh",
+      "roll": 102,
+      "email": "mahesh@email.com",
+      "city": "1"
+   }
+},
+{
+   "model": "myapp.studentmodel",
+   "pk": 3,
+   "fields": {
+      "name": "Suresh",
+      "roll": 103,
+      "email": "suresh@email.com",
+      "city": "Ahemdabad"
+   }
+},
+{
+   "model": "myapp.studentmodel",
+   "pk": 4,
+   "fields": {
+      "name": "Parth",
+      "roll": 104,
+      "email": "parh@emmail.com",
+      "city": "Surat"
+   }
+},
+{
+   "model": "myapp.studentmodel",
+   "pk": 5,
+   "fields": {
+      "name": "Farhan",
+      "roll": 105,
+      "email": "farhan@email.com",
+      "city": "Palanpur"
+   }
+}
+]
