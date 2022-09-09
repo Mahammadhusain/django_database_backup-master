@@ -41,11 +41,11 @@
 
 
   <!-- Modal for Postgresql -->
-  <div class="modal fade" id="Postgresqlmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal modal-md fade" id="Postgresqlmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Postgresql Database Configuration</h5>
+          <h5 class="modal-title" id="Postgresqlmodal">Postgresql Database Configuration</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -94,10 +94,126 @@
             </div>
         </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal for Mysql -->
+  <div class="modal modal-md fade" id="Mysqlmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="Mysqlmodal">Postgresql Database Configuration</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+          <div class="container p-3">
+            <div class="row">
+                <div class="col-lg-12 p-4 border" style="border-radius: 10px; background-color: #e6e6e6;">
+                    <form method="POST" action="{% url 'mysql_config' %}">
+                      {% csrf_token %}
+                        <div class="mb-3">
+                          <label  class="form-label">Database Vendors</label>
+                          <select class="form-select form-select-sm" name="db_vendor" autofocus >
+                            <option  disabled>--- Select Database Vendor ---</option>
+                            <option value="1">SqlLite3</option>
+                            <option selected value="2">Mysql</option>
+                            <option value="3">Postgresql </option>
+                          </select>
+                          
+                        </div>
+                        <div class="mb-3">
+                          <label  class="form-label">Database Name</label>
+                          <input type="text" value="test" class="form-control form-control-sm" name="db_name" placeholder="Enter database name">
+                        </div>
+                        <div class="mb-3">
+                          <label  class="form-label">Username</label>
+                          <input value="root" type="text" class="form-control form-control-sm" name="db_user" placeholder="Enter database username">
+                        </div>
+    
+                        <div class="mb-3">
+                          <label  class="form-label">Password</label>
+                          <input value="root" type="text" class="form-control form-control-sm" name="db_pass" placeholder="Enter database password">
+                        </div>
+    
+                        <div class="mb-3">
+                          <label  class="form-label">Host</label>
+                          <input value="localhost" type="text" class="form-control form-control-sm" name="db_host" placeholder="Enter database host name">
+                        </div>
+    
+                        <div class="mb-3">
+                          <label  class="form-label">Port</label>
+                          <input value="3306" type="text" class="form-control form-control-sm" name="db_port" placeholder="Enter database port number">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for SqlLite -->
+  <div class="modal modal-md fade" id="SqlLitemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="SqlLitemodal">Postgresql Database Configuration</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container p-3">
+            <div class="row">
+                <div class="col-lg-12 p-4 border" style="border-radius: 10px; background-color: #e6e6e6;">
+                    <form method="POST" action="{% url 'sqlLite_config' %}">
+                      {% csrf_token %}
+                        <div class="mb-3">
+                          <label  class="form-label">Database Vendors</label>
+                          <select class="form-select form-select-sm" name="db_vendor" autofocus >
+                            <option  disabled>--- Select Database Vendor ---</option>
+                            <option value="1">SqlLite3</option>
+                            <option selected value="2">Mysql</option>
+                            <option value="3">Postgresql </option>
+                          </select>
+                          
+                        </div>
+                        <div class="mb-3">
+                          <label  class="form-label">Database Name</label>
+                          <input type="text" value="test" class="form-control form-control-sm" name="db_name" placeholder="Enter database name">
+                        </div>
+                        <div class="mb-3">
+                          <label  class="form-label">Username</label>
+                          <input value="root" type="text" class="form-control form-control-sm" name="db_user" placeholder="Enter database username">
+                        </div>
+    
+                        <div class="mb-3">
+                          <label  class="form-label">Password</label>
+                          <input value="root" type="text" class="form-control form-control-sm" name="db_pass" placeholder="Enter database password">
+                        </div>
+    
+                        <div class="mb-3">
+                          <label  class="form-label">Host</label>
+                          <input value="localhost" type="text" class="form-control form-control-sm" name="db_host" placeholder="Enter database host name">
+                        </div>
+    
+                        <div class="mb-3">
+                          <label  class="form-label">Port</label>
+                          <input value="3306" type="text" class="form-control form-control-sm" name="db_port" placeholder="Enter database port number">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        
       </div>
     </div>
   </div>
